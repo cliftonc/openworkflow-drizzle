@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/cliftonc/openworkflow-drizzle.git"
   },
-  "license": "Apache-2.0",
+  "license": "MIT",
   "author": "Clifton Cunningham",
   "type": "module",
   "exports": {

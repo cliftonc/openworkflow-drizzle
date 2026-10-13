@@ -223,4 +223,4 @@ pass it the packages to install alongside:
 
 ## License
 
-Apache-2.0
+MIT
