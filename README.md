@@ -223,4 +223,14 @@ pass it the packages to install alongside:
 
 ## License
 
-MIT
+MIT, except for code adapted from OpenWorkflow (see below).
+
+### Third-party code
+
+The table definitions in `src/tables.ts`, the queries in
+`src/sqlite-backend.ts` and `src/pg-backend.ts`, and the row mapping in
+`src/rows.ts` are adapted from
+[OpenWorkflow](https://github.com/openworkflowdev/openworkflow)'s SQLite and
+PostgreSQL backends, which are licensed under the Apache License 2.0. They are
+modified to run on Drizzle ORM. A copy of that license is in
+[`LICENSE-APACHE`](LICENSE-APACHE).

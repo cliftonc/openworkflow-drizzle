@@ -29,7 +29,8 @@
   },
   "files": [
     "dist",
-    "!*.tsbuildinfo"
+    "!*.tsbuildinfo",
+    "LICENSE-APACHE"
   ],
   "scripts": {
     "build": "npm run clean && tsc -p tsconfig.build.json",

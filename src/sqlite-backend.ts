@@ -1,3 +1,5 @@
+// Adapted from OpenWorkflow (https://github.com/openworkflowdev/openworkflow),
+// Apache-2.0, see LICENSE-APACHE. Modified to run on Drizzle ORM.
 import {
   fromJSON,
   Mutex,
