@@ -1,0 +1,69 @@
+{
+  "name": "openworkflow-drizzle",
+  "version": "0.1.0",
+  "description": "Drizzle ORM backend for OpenWorkflow: run durable workflows in your existing SQLite or PostgreSQL database, with your own driver and migrations",
+  "keywords": [
+    "drizzle",
+    "drizzle-orm",
+    "durable execution",
+    "durable workflow",
+    "openworkflow",
+    "postgresql",
+    "sqlite",
+    "workflow"
+  ],
+  "homepage": "https://github.com/cliftonc/openworkflow-drizzle#readme",
+  "bugs": "https://github.com/cliftonc/openworkflow-drizzle/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cliftonc/openworkflow-drizzle.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Clifton Cunningham",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!*.tsbuildinfo"
+  ],
+  "scripts": {
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "ci": "npm run format && npm run lint && npm run typecheck && npm run build && npm test",
+    "clean": "rm -rf dist",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "link:openworkflow": "sh scripts/link-openworkflow.sh",
+    "lint": "oxlint .",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@libsql/client": "^0.18.0",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "@tsconfig/node22": "^22",
+    "@tsconfig/strictest": "^2.0.8",
+    "@types/node": "^24",
+    "drizzle-kit": "^0.31.11",
+    "drizzle-orm": "^0.45.4",
+    "openworkflow": "0.11.0",
+    "oxlint": "^1.87.0",
+    "postgres": "^3.4.9",
+    "prettier": "^3.9.9",
+    "prettier-plugin-packagejson": "^3.0.2",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.0"
+  },
+  "peerDependencies": {
+    "drizzle-orm": ">=0.45.0 <2",
+    "openworkflow": ">=0.11.0 <0.13.0"
+  },
+  "engines": {
+    "node": ">=22.22.0"
+  }
+}
